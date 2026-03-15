@@ -1,0 +1,18 @@
+[
+  {
+    "event_id": "evt-1001",
+    "target_url": "https://partner-a.test/orders",
+    "payload": {
+      "order_id": "ord-1001",
+      "status": "paid"
+    }
+  },
+  {
+    "event_id": "evt-1002",
+    "target_url": "https://partner-b.test/orders",
+    "payload": {
+      "order_id": "ord-1002",
+      "status": "fulfilled"
+    }
+  }
+]
