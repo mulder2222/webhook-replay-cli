@@ -12,5 +12,8 @@ authors = [
   { name = "Bas Mulder", email = "mulder2222@hotmail.com" }
 ]
 
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
 [project.scripts]
 webhook-replay = "webhook_replay_cli.cli:main"

@@ -29,8 +29,9 @@ It is not a random Python exercise. It is aligned with real integration support 
 
 - replay events from JSON input
 - dry-run mode
-- configurable timeout and retry count
-- simple status reporting
+- configurable retry count
+- deterministic retry loop with per-event attempt tracking
+- batch summary output
 - structured terminal output
 - designed for extension with CSV, queues, or persistence later
 
@@ -44,7 +45,7 @@ python -m webhook_replay_cli replay --input examples/events.json --max-retries 3
 ## Architecture
 
 - `cli.py` handles argument parsing
-- `services/replayer.py` owns replay orchestration
+- `services/replayer.py` owns replay orchestration and summaries
 - `clients/http_client.py` wraps outbound HTTP behavior
 - `models.py` defines event data structures
 - `formatters.py` keeps terminal output separate from replay logic
@@ -60,5 +61,5 @@ python -m webhook_replay_cli replay --input examples/events.json --max-retries 3
 - async replay mode
 - CSV input support
 - persistent replay history
-- backoff strategies
+- exponential backoff strategies
 - richer exit codes and CI

@@ -12,7 +12,8 @@
     "target_url": "https://partner-b.test/orders",
     "payload": {
       "order_id": "ord-1002",
-      "status": "fulfilled"
+      "status": "fulfilled",
+      "simulate": "fail"
     }
   }
 ]
